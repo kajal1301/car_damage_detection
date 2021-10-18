@@ -1,22 +1,6 @@
 <!doctype html>
     <head>
-        <style>
-            * {
-        box-sizing: border-box;
-      }
-      .column {
-        float: left;
-        width: 50%;
-        padding: 5px;
-      }
-      
-      /* Clearfix (clear floats) */
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-        </style>
+        
             <!-- Required meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,29 +14,95 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <title>Car Damage Detector </title>
-        </head>
-    <body background-color: rgb(3, 0, 0);>
-        
+    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Baloo Bhai2',cursive;
+        }   
+        .header{
+            background-color: #385877;
+            opacity: 01;
+            color: #d1e5f9;
+            padding: 4.5em 0 2.5em 0;
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            -moz-justify-content: center;
+            -webkit-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center;
+            background-position: top left, center center;
+            background-attachment: fixed, fixed;
+            background-size: auto, cover;
+            height: 100vh;
+            min-height: 35em;
+            
+        }
+        .btn{
+            font-family: 'Baloo Bhai2',cursive;
+            border-radius: 10-px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            width: 350px;
+            padding: 7px;
+            border:2px solid black;
+            margin:50px 40px;
+            
+        }   
+        .form-group input{
+            text-align: center;
+            display: block;
+            width: 350px;
+            padding: 5px;
+            border:2px solid black;
+            margin:10px 40px;
+
+        }
+    </style>
+    <body>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <div class="position-absolute top-10 start-50 translate-middle mt-1 bi bi-caret-down-fill">  <!-- Header -->
-			<header id="header">
-				<div class="content"><center>
-					<h1><a href="#">Car Damage Detector</a></h1>
+        <header class= 'header'>
+            
+            {% block bodyblock %}
+            {% endblock %}
+            <br>
+
+        <div class="container">
+            <div class="home-content">
+                <h1>Car Damage Detector</h1>
+                <hr color="#d1e5f9">
+                <br>
+                <br>
+                <div class="row home-content__main">
+                    <h3> Upload Damaged Car Images To check for Damage in car.</h3>
+                </div>
+            </div> 
+            <br><br>
+            <div>
+            <form method=post enctype=multipart/form-data><div class= 'form-group'>
+            <p>
+              <input type="file" name="file" class="btn " required>
             </p>
-        
-        {% block bodyblock %}
-
-
-
-        {% endblock %}
-        <form method=post enctype=multipart/form-data>
-          <input type=file name=file>
-          <input type=submit value=Upload>
-          </form>
-        </center>
-				</div>	</header>   
-        </body></div>
-        </div>
+            <p>
+              <button class="btn" type="submit" value= Upload>UPLOAD</button>
+            </p></div>
+            </form>
+            </div>
+            <div>
+                <img src="bgimg2.jpeg" height="250px" width="800px">
+            </div>
+        </div>  
+    </header> 
         <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

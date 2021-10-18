@@ -1,78 +1,190 @@
-{% extends 'base.html' %}
+<!doctype html>
+    <head>
+        
+            <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block bodyblock %}
-<div class="container">
-    <br><h3 class='display-2'>Result</h3>
-</div>
-<br>
-<!--<div class="container">-->
-<!--    <br>-->
-    <!--<form action="#" method="post" enctype="multipart/form-data">-->
-    <!--    <label for="upload">Upload to predict</label>-->
-    <!--    <input type="file" id="upload" name="fileToUpload" required="true">-->
-    <!--    <input type="submit" value="Upload & Predict" class="btn btn-outline-primary">-->
-    <!--</form>-->
 
-<!--</div><br><br>-->
-{% if not fileupload %}
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-{% endif %}
-{% if fileupload  %}
-    {%if not is_car%}
-        <p>The image doesnt have any car!!!!! Try with another Image</p>
-    {%endif%}
-    {%if is_car%}
-        <p>Car Found..</p>
-        {%if damaged_car%}
-            <p>Damage Found..</p>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Result </title>
+    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Baloo Bhai2',cursive;
+            
+            background-color: #385877;
+        }   
+        .header{
+            background-color: #385877;
+            opacity: 01;
+            color: #d1e5f9;
+            padding: 4.5em 0 2.5em 0;
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            -moz-justify-content: center;
+            -webkit-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center;
+            background-position: top left, center center;
+            background-attachment: fixed, fixed;
+            background-size: auto, cover;
+            height: 100vh;
+            min-height: 35em;
+            
+        }
+
+            
+        .btn{
+            font-family: 'Baloo Bhai2',cursive;
+            border-radius: 10-px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            width: 350px;
+            padding: 7px;
+            border:2px solid black;
+            margin:50px 40px;
+        }   
+        .column{
+            border:2px;
+            border-color:white;
+
+        }
+        .form-group input{
+            text-align: center;
+            display: block;
+            width: 350px;
+            padding: 5px;
+            border:2px solid black;
+            margin:10px 40px;
+
+        }
+        .container{
+            color: #d1e5f9;
+        }
+    </style>
+    <body>
+        <nav class="navbar navbar-light bg-dark">
+        <div class="container">
+            <img src="logo.png" alt="" width="50" height="  44">
+        <h3>Car Damage Detector</h3>
+        </div>
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+            <header class= 'header'>
             <div class="container">
-                <div class="row"><center>
-                    <div class="column" id="predict">
-                        <p>Original Image:</p>
-                        <img src="{{ url_for('display_image', filename=filename) }}">
-                    </div>
-                    <div class="column">
-                        <p>Predicted Image:</p>
-                        <img src="{{ url_for('predict_image', imagename=imagename) }}">
-                    </div>
-                    <div>
-                        <ul class="actions">
-                          <li><a href="/download" class="button primary icon solid fa-download">Download</a></li>
-                    
-                        </ul>
+                <div class="home-content">
+                <br>
+                <br>
+                <br>
+                <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br><br><br>
+                 <br>   <br><br><br>
+                    <h1 align="center">Result</h1>
+                    <hr color="#d1e5f9">
+                    <div class="row home-content__main">
                         
+                    {% if fileupload  %}
+                        {%if not is_car%}
+                            <h3>The image doesnt have any car!!!!! Try with another Image</h3>
+                        {%endif%}
+                        {%if is_car%}
+                            <p>Car Found..
+                            </p>
+                            {%if damaged_car%}
+                                <p>Damage Found..</p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="column" id="predict">
+                                            <p>Original Image:</p>
+                                            <img src="{{ url_for('display_image', filename=filename) }}">
+                                        </div>
+                                        <div class="column">
+                                            <p>Predicted Image:</p>
+                                            <img src="{{ url_for('predict_image', imagename=filename) }}">
+                                        </div>
+                                        <div>
+                                        <p>
+                                            <a href="{{ url_for('.download_file',filename=filename) }}">Download</a>
+                                        </p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                            {%endif%}
+                            {%if not damaged_car%}
+                                <p> The car is not damaged!!!!</p>
+                            {%endif%}
+                        {%endif%}
+
+                        {%if not is_car%}
+                            <p>No car detected.....</p>
+                        {%endif%}
+                    {%endif%}
+                    {%if zipupload%}
+                        <p>Number of cars detected:{{car}}</p>
+                        <p>Number of damaged cars detected:{{dam}}</p>
+                        <div><p>Download predicted Images:</p>
+                            <p>
+                                <button class="btn" ><a href="{{ url_for('.download_file',filename=result) }}">Download</a></button>
+                            </p>
+                        </div>
+                        <p>Done</p>     
+                    {%endif%}
+
+
                     </div>
+                </div> 
+                <br><br>
+                <div>
+                <form method=post enctype=multipart/form-data><div class= 'form-group'>
+                <p>
+                <input type="file" name="file" class="btn " required>
+                </p>
+                <p>
+                <button class="btn" type="submit" value= Upload>UPLOAD</button>
+                </p></div>
+                </form>
                 </div>
-                <br>
-                <br>
-            </div>
-        {%endif%}
-        {%if not damaged_car%}
-            <p> The car is not damaged!!!!</p>
-        {%endif%}
-    {%endif%}
-    {%if not is_car%}
-    <p>No car detected.....</p>
-    {%endif%}
-    {%if zipupload%}
-        <p>Images Found: {{image_len}}</p>
-        <ul class="actions">
-                          <li><a href="/download" class="button primary icon solid fa-download">Download Zip</a></li>
-                    
-                        </ul>
-                        
-    {%endif%}
+                <div>
+                    <img src="bgimg2.jpeg" height="250px" width="800px">
+                </div>
+        </div>  
+    </header> 
+        <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-{% endif %}
-
-{% endblock %}
+        <!-- Bootstrap JQuery -->
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    </body>
+</html>
