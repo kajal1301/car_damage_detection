@@ -1,7 +1,7 @@
 # Car-Damage-Detection-using-mask-rcnn
 Identifies and locates the damages in car using mask-rcnn
 # Table of content:
-- [Demo]()
+- [DEMO]()
 - [OVERVIEW]() 
 - [BUSINESS PROBLEM]()
 - [TECHNICAL ASPECT]()
@@ -17,7 +17,9 @@ Identifies and locates the damages in car using mask-rcnn
 # Demo:
 ![](static/uploads/demo.png)
 # Overview:
-This is a simple Car Damage Detection app which takes an image or a zip file as input,identifies if thereis a car in image and if the car is damaged and then it locates the damage in the car and displays the result as output. For zip files, it extracts all the images in file, and for each image it detects the damage and result the images with damage located on them in a zip file.
+This is a Car Damage Detection application which can detect if a car is damaged or not using Artificial Intelligence.
+Here, we can input an image or a set of images in compressed(zip) file,it will identify if there is a car in image and if the car is damaged and then it locates the damage in the car and displays the result as an output. 
+For zip files, it extracts all the images in file, and for each image it detects the damage and result the images with damage located on them in a zip file.
 # Business Problem:
 Given Image of a car we have to find out :
 (i) The given image has a car
@@ -29,6 +31,7 @@ classification problem. And for dealing with images as input CNN(Convolutional N
 Network) will be used.
 
 # Technical Aspect:
+........
 # Collecting Data:
 Damaged Car images are downloaded from the internet and further divided into train,
 test and validation data.
@@ -37,7 +40,7 @@ For this problem we have 2 types of data:
 containing cars.
 - For detecting damage in cars we have train and validation folders of images containing
 damaged and non-damaged cars.
-- For locating damage in the car we have train, test and val folders of damaged car
+- For locating damage in the car we have 300 train, 300 test and 160 val folders of damaged car
 images.
 
 # Installation:
@@ -48,7 +51,7 @@ To install the required packages and libraries, run this command in the project 
 - Libraries used: numpy, keras, IPython
 - Model used: VGG16
 Using pre-trained VGG16 model on imagenet:
-To compare the accuracy, I used various models like VGG16, VGG!9, ResNet50, InceptionV3,
+To compare the accuracy, I used various models like VGG16, VGG19, ResNet50, InceptionV3,
 xception and compared accuracy of all the models. VGG16 was giving better accuracy than all
 other models.
 I used the VGG16 model to get the prediction of cars in images.
