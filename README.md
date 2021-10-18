@@ -15,7 +15,7 @@ Identifies and locates the damages in car using mask-rcnn
 - [CONCLUSION]()
 
 # Demo:
-![](https://github.com/kajal1301/car_damage_detection/blob/main/static/uploads/demo.png)
+![](static/uploads/demo.png)
 # Overview:
 This is a simple Car Damage Detection app which takes an image or a zip file as input,identifies if thereis a car in image and if the car is damaged and then it locates the damage in the car and displays the result as output. For zip files, it extracts all the images in file, and for each image it detects the damage and result the images with damage located on them in a zip file.
 # Business Problem:
@@ -93,9 +93,9 @@ damage by drawing a bounding box or mask over it.
 I Deployed this model using flask
 # Web app:
   ## For Image:
-   ![](https://github.com/kajal1301/car_damage_detection/blob/main/static/uploads/demo3.png)
+   ![](static/uploads/demo3.png)
   ## For Zip file:
-   ![](https://github.com/kajal1301/car_damage_detection/blob/main/static/uploads/demo2.png)
+   ![](static/uploads/demo2.png)
    
 # CONCLUSION
 Using Mask-RCNN is able to locate the damage in the image of the car. And it is also
