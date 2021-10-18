@@ -32,7 +32,7 @@ To install the required packages and libraries, run this command in the project 
   ## For Image:
     ![]()
   ## For Zip file:
-    ![]()
+    ![](https://github.com/kajal1301/car_damage_detection/blob/main/static/uploads/demo2.png)
    
 
 
