@@ -95,7 +95,7 @@ damage by drawing a bounding box or mask over it.
 # [Deployment:](https://github.com/kajal1301/car_damage_detection/blob/main/car_damage.ipynb)
 I Deployed this model using flask
 # Web app:
-![](https://github.com/kajal1301/car_damage_detection/blob/main/static/demo_video.mp4)
+![](static/demo_video.mp4)
 ## For Image:
    ![](static/uploads/demo3.png)
 ## For Zip file:
