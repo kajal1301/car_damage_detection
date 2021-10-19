@@ -47,7 +47,7 @@ images.
 To install the required packages and libraries, run this command in the project directory after [cloning](https://github.com/matterport/Mask_RCNN.git) the repository:
  
   pip install -r requirements.txt
-# Detecting Car in Image:
+# [Detecting Car in Image:](https://github.com/kajal1301/car_damage_detection/blob/main/Car_detection.ipynb)
 - Libraries used: numpy, keras, IPython
 - Model used: VGG16
 Using pre-trained VGG16 model on imagenet:
@@ -59,7 +59,7 @@ I calculated top predictions of images and stored them in a dictionary in sorted
 If for any image its prediction is same as the top predictions stored in categ_count dict then the
 image contains the image.
 
-# Detecting Damage in Car:
+# [Detecting Damage in Car:](https://github.com/kajal1301/car_damage_detection/blob/main/Damage%20identification.ipynb)
 After detecting car in image, to find whether car is damaged or not.
 For this I divided the dataset into training and validation data and i further divided the
 dataset into damaged and non-damaged dataset.
@@ -75,7 +75,7 @@ confusion matrix. Then I checked for damage in the car with the is_damaged funct
 Here I predicted damage in each image and if the prediction is greater than 50% the car
 is referred to damaged.
 
-# Locating Damage in Car:
+# [Locating Damage in Car:](https://github.com/kajal1301/car_damage_detection/blob/main/damage_detection_mrcnn%20(2).ipynb)
 Damage in the car can be located with 2 ways:
 ● By drawing a Bounding box around the damage.
 ● Mask a polygon over the damage.
@@ -92,7 +92,7 @@ If the car is damaged then it will draw a bounding box and mask over the damage 
 in the car.
 If there is no car in the image or if the car is not damaged then it wont detect any
 damage by drawing a bounding box or mask over it.
-# Deployment:
+# [Deployment:]
 I Deployed this model using flask
 # Web app:
   ## For Image:
