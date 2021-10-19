@@ -75,7 +75,7 @@ confusion matrix. Then I checked for damage in the car with the is_damaged funct
 Here I predicted damage in each image and if the prediction is greater than 50% the car
 is referred to damaged.
 
-# [Locating Damage in Car:](https://github.com/kajal1301/car_damage_detection/blob/main/damage_detection_mrcnn%20(2).ipynb)
+# [Locating Damage in Car:](https://github.com/kajal1301/car_damage_detection/blob/main/damage_detection_mrcnn%20(3).ipynb)
 Damage in the car can be located with 2 ways:
 ● By drawing a Bounding box around the damage.
 ● Mask a polygon over the damage.
