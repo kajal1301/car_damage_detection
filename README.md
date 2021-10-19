@@ -92,17 +92,17 @@ If the car is damaged then it will draw a bounding box and mask over the damage 
 in the car.
 If there is no car in the image or if the car is not damaged then it wont detect any
 damage by drawing a bounding box or mask over it.
-# [Deployment:]
+# [Deployment:](https://github.com/kajal1301/car_damage_detection/blob/main/car_damage.ipynb)
 I Deployed this model using flask
 # Web app:
-  ## For Image:
+## For Image:
    ![](static/uploads/demo3.png)
-  ## For Zip file:
+## For Zip file:
    ![](static/uploads/demo2.png)
    
 # CONCLUSION
 Using Mask-RCNN is able to locate the damage in the image of the car. And it is also
 detecting easily whether there is a scratch or not.
 VGG16 model trained on imagenet dataset is showing better accuracy then all other
-models in detecting car in image and damage in cars
+models in detecting car in image and damage in cars.
 
