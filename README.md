@@ -94,7 +94,7 @@ in the car.
 * If there is no car in the image or if the car is not damaged then it wont detect any
 damage by drawing a bounding box or mask over it.
 # [Deployment:](https://github.com/kajal1301/car_damage_detection/blob/main/car_damage.ipynb)
-* This model was deployed using flask.
+* This model was deployed using flask and Amazon EC2.
 # Web app:
 ![](static/demo_video.mp4)
 ## For Image:
